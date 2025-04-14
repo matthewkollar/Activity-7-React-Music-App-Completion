@@ -1,24 +1,30 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-const Card = (props) => {
+const Card = ({ albumTitle, albumDescription, imgURL, linkURL, buttonText, artistId }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate(`/show/${artistId}`);
+  };
+
+  const handleEdit = (e) => {
+    e.stopPropagation(); // Prevent triggering show view
+    navigate(`/edit/${artistId}`);
+  };
+
   return (
-    <div className="card" style={{ width: '18rem', margin: '1rem' }}>
-      <img
-        src={props.imgURL}
-        className="card-img-top"
-        alt={props.albumTitle}
-      />
+    <div className="card m-2" style={{ width: '18rem', cursor: 'pointer' }} onClick={handleClick}>
+      <img src={imgURL} className="card-img-top" alt={albumTitle} />
       <div className="card-body">
-        <h5 className="card-title">{props.albumTitle}</h5>
-        <p className="card-text">{props.albumDescription}</p>
-        <a
-          href={props.linkURL}
-          className="btn btn-primary"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {props.buttonText}
+        <h5 className="card-title">{albumTitle}</h5>
+        <p className="card-text">{albumDescription}</p>
+        <a href={linkURL} className="btn btn-primary" onClick={(e) => e.stopPropagation()}>
+          {buttonText}
         </a>
+        <button className="btn btn-secondary btn-sm mt-2 ms-2" onClick={handleEdit}>
+          Edit
+        </button>
       </div>
     </div>
   );

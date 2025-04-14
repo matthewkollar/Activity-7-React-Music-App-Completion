@@ -5,6 +5,8 @@ import SearchAlbum from './SearchAlbum';
 import NewAlbum from './NewAlbum';
 import OneAlbum from './OneAlbum';
 import NavBar from './NavBar';
+import EditAlbum from './EditAlbum';
+
 
 const App = () => {
   const [albumList, setAlbumList] = useState([]);
@@ -43,6 +45,7 @@ const App = () => {
           />
           <Route path="/add" element={<NewAlbum />} />
           <Route path="/show/:albumId" element={<OneAlbum />} />
+          <Route path="/edit/:albumId" element={<EditAlbum />} />
         </Routes>
       </div>
     </BrowserRouter>

@@ -1,4 +1,3 @@
-// src/AlbumList.js
 import React from 'react';
 import Card from './Card';
 
@@ -8,6 +7,7 @@ const AlbumList = ({ albums }) => {
       {albums.map((album) => (
         <Card
           key={album.artistId}
+          artistId={album.artistId} // ✅ Needed for routing
           albumTitle={album.albumTitle}
           albumDescription={album.albumDescription}
           imgURL={album.imgURL}
