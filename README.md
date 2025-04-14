@@ -22,15 +22,15 @@ This mini app demonstrates dynamic rendering of components using React. It allow
 ## 📸 Screenshots
 
 ### Initial State
-![homepage](/screenshots/homepage.png)
+![homepage](music/screenshots/homepage.png)
 > The app’s initial state, showing two hardcoded posts ("First blog post!" and "Learning React is fun.") with a text input to add new ones.
 
 ### Adding a New Post
-![add-new-post](/screenshots/add-new-post.png)
+![add-new-post](music/screenshots/add-new-post.png)
 > A user has typed a new post titled “This is a test post” and is about to submit it using the Add Post button.
 
 ### Deleting a Post
-![deleted-posts](/screenshots/deleted-posts.png)
+![deleted-posts](music/screenshots/deleted-posts.png)
 > The newly added post has been deleted using the Delete button, demonstrating dynamic removal from the list.
 
 ---
@@ -77,19 +77,19 @@ This exercise demonstrated how to dynamically add and remove components from a p
 ## 📸 Screenshots
 
 ### Homepage View with Search and Edit Buttons
-![music-homepage](/screenshots/music-homepage.png)
+![music-homepage](music/screenshots/music-homepage.png)
 > The main homepage shows a search bar and a set of album cards. Each card includes buttons to play, explore, or edit the album.
 
 ### Search Filter for "Abbey"
-![music-search-album](/screenshots/music-search-album.png)
+![music-search-album](music/screenshots/music-search-album.png)
 > The user has typed "abbey" into the search bar, and only Abbey Road is shown, verifying dynamic filtering.
 
 ### Track View with Lyrics and Video
-![music-album-tracks-lyrics-videourl](/screenshots/music-album-tracks-lyrics-videourl.png)
+![music-album-tracks-lyrics-videourl](music/screenshots/music-album-tracks-lyrics-videourl.png)
 > Clicking an album displays its tracks. When a track is clicked, its lyrics and a YouTube video are shown dynamically.
 
 ### Editing an Album
-![music-edit-album](/screenshots/music-edit-album.png)
+![music-edit-album](music/screenshots/music-edit-album.png)
 > A form allows editing the selected album. The fields are pre-populated using state fetched via Axios.
 
 ---
